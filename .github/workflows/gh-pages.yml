@@ -4,7 +4,6 @@ on:
   push:
     branches: [ main ]
 
-# 👇 Нужны права для Pages
 permissions:
   contents: read
   pages: write
@@ -21,7 +20,9 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Setup system Graphviz
-        run: sudo apt-get update && sudo apt-get install -y graphviz
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y graphviz
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -35,6 +36,9 @@ jobs:
 
       - name: Generate diagrams
         run: python scripts/gen_diagrams.py
+
+      - name: List generated files
+        run: ls -la docs/diagrams
 
       - name: Build MkDocs
         run: mkdocs build --strict
