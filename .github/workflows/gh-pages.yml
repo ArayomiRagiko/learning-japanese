@@ -37,8 +37,12 @@ jobs:
       - name: Generate diagrams
         run: python scripts/gen_diagrams.py
 
-      - name: List generated files
-        run: ls -la docs/diagrams
+      - name: List built files
+        run: |
+          echo "--- site/diagrams ---"
+          ls -la site/diagrams || true
+          echo "--- site/ ---"
+          ls -la site | head -n 50
 
       - name: Build MkDocs
         run: mkdocs build --strict

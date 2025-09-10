@@ -5,6 +5,11 @@ hide:
 
 # Глаголы
 
-<object data="/diagrams/conjugation.svg" type="image/svg+xml" width="70%"></object>
+# Спряжение глаголов (行く/食べる)
 
-![](/diagrams/conjugation.png)
+<!-- SVG с тултипами. Без ведущего слэша! -->
+<object data="conjugation.svg" type="image/svg+xml" width="70%" height="520"></object>
+
+_Статичный вариант (без тултипов):_
+
+![PNG](conjugation.png)
