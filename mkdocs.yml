@@ -1,0 +1,31 @@
+site_name: 'Изучение Японского языка'
+site_author: Михаил Миронов
+
+theme: 
+  name: material
+  language: ru
+  palette:
+    primary: blue grey
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.tracking
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - attr_list
+  - admonition
+  - pymdownx.details
+
+
+plugins:
+  - glightbox
+  - minify:
+      minify_html: true
+
+
+nav:
+  - 'Главная': index.md
+  - 'Глаголы': verbs.md
