@@ -22,10 +22,9 @@ markdown_extensions:
 
 plugins:
   - glightbox
-  - minify:
-      minify_html: true
 
 
 nav:
   - 'Главная': index.md
   - 'Глаголы': verbs.md
+  - 'Ударения': accents.md
